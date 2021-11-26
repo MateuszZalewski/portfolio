@@ -1,4 +1,5 @@
 from django.db import models
+from PIL import Image
 
 
 class Tech(models.Model):
@@ -16,6 +17,7 @@ class Project(models.Model):
     description = models.TextField(blank=True)
     github = models.URLField(blank=True)
     link = models.URLField(blank=True)
+    techs = models.ManyToManyField(Tech)
 
     def __str__(self):
         return self.name
