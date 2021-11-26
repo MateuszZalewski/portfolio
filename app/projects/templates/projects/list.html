@@ -3,7 +3,7 @@
     <div class="grid-row">
         {% for project in projects %}
                 <div class="cell">
-                    <a href="#">{{ project.name }}</a>
+                    <a href="{% url 'project-detail' project.id %}">{{ project.name }}</a>
                 </div>
         {% endfor %}
     </div>
