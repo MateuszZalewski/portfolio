@@ -27,3 +27,32 @@ ul {
 .site-header .navbar-nav .nav-link.active {
     font-weight: 500;
 }
+
+.grid-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+div.cell {
+    background: #ffffff;
+    padding: 10px;
+    border: 1px solid lightblue;
+    border-radius: 3px;
+    margin: 6px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+}
+
+@media screen and (max-width: 760px) {
+    .grid-row {
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    div.cell {
+        grid-column: auto;
+        grid-row: auto;
+    }
+}
