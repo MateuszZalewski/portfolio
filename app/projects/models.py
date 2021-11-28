@@ -29,6 +29,7 @@ class Project(models.Model):
     github = models.URLField(blank=True)
     link = models.URLField(blank=True)
     techs = models.ManyToManyField(Tech)
+    readme = models.TextField(blank=True)
 
     def __str__(self):
         return self.name
