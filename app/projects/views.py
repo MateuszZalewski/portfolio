@@ -12,4 +12,5 @@ class ProjectListView(ListView):
 class ProjectDetailView(DetailView):
     model = Project
     template_name = 'projects/detail.html'
+    extra_context = {'title': 'Project Detail'}
     context_object_name = 'project'

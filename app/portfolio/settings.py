@@ -142,3 +142,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CELERY_BROKER_URL = "redis://redis:6379"
 CELERY_RESULT_BACKEND = "redis://redis:6379"
 
+CELERY_BEAT_SCHEDULE = {
+    "update_readme": {
+        "task": "portfolio.tasks.update_readme",
+        "schedule": crontab(hour="*/12"),
+    },
+}
+
