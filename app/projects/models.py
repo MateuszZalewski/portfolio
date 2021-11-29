@@ -6,7 +6,7 @@ class Tech(models.Model):
     name = models.CharField(max_length=200)
     description = models.TextField(blank=True)
     website = models.URLField(blank=True)
-    logo = models.ImageField()
+    logo = models.ImageField(upload_to='logos/')
 
     def __str__(self):
         return self.name
@@ -30,7 +30,7 @@ class Project(models.Model):
     link = models.URLField(blank=True)
     techs = models.ManyToManyField(Tech)
     readme = models.TextField(blank=True)
-    image = models.ImageField(null=True)
+    image = models.ImageField(upload_to='images/', null=True, blank=True)
 
     def __str__(self):
         return self.name

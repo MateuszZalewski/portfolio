@@ -5,3 +5,4 @@ markdown==3.3.6
 requests==2.26.0
 redis==4.0.2
 celery==5.2.1
+django-cleanup==5.2.0

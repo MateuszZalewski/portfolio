@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # my apps
     'projects',
+    # installed
+    'django_cleanup.apps.CleanupConfig',
 ]
 
 MIDDLEWARE = [
