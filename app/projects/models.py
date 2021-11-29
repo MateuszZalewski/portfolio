@@ -30,6 +30,7 @@ class Project(models.Model):
     link = models.URLField(blank=True)
     techs = models.ManyToManyField(Tech)
     readme = models.TextField(blank=True)
+    image = models.ImageField(null=True)
 
     def __str__(self):
         return self.name
