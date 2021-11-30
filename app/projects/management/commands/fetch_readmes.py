@@ -1,6 +1,5 @@
 from django.core.management.base import BaseCommand
 import pypandoc
-from markdown import markdown
 import requests
 
 from projects.models import Project
@@ -20,7 +19,11 @@ class Command(BaseCommand):
         raw_readme_link = self._construct_raw_link(github_link=github_link)
         response = requests.get(raw_readme_link)
         if response.status_code == 200:
-            return pypandoc.convert_text(response.text, 'html5', format='markdown_github')
+            out_format = 'html5'
+            out_extensions = ('gfm_auto_identifiers', 'pipe_tables', 'backtick_code_blocks', 'fenced_code_attributes')
+            out_extensions = '+'.join(out_extensions)
+            out = '+'.join((out_format, out_extensions))
+            return pypandoc.convert_text(response.text, out, format='gfm', extra_args=['--no-highlight'])
         return None
 
     def handle(self, *args, **options):
