@@ -9,7 +9,7 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 # install dependencies
-RUN apt update -y && apt install -y apt-utils netcat libpq5
+RUN apt update -y && apt install -y apt-utils netcat libpq5 pandoc
 RUN pip install --upgrade pip
 COPY ./requirements.txt .
 RUN pip install -r requirements.txt

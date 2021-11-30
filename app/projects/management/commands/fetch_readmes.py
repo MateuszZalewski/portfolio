@@ -1,4 +1,5 @@
 from django.core.management.base import BaseCommand
+import pypandoc
 from markdown import markdown
 import requests
 
@@ -19,8 +20,7 @@ class Command(BaseCommand):
         raw_readme_link = self._construct_raw_link(github_link=github_link)
         response = requests.get(raw_readme_link)
         if response.status_code == 200:
-            markdown_extensions = ['md_in_html', 'extra', 'codehilite', 'nl2br', 'smarty', 'meta']
-            return markdown(response.text, extensions=markdown_extensions)
+            return pypandoc.convert_text(response.text, 'html5', format='markdown_github')
         return None
 
     def handle(self, *args, **options):
