@@ -11,7 +11,9 @@
             <!-- README -->
             {% if project.readme %}
                 <div class="my-5 border rounded border-dark" style="text-align: left; padding: 10px">
-                    {{ project.readme|safe }}
+                    <div class="readme mx-4 my-4">
+                        {{ project.readme|safe }}
+                    </div>
                 </div>
             {% endif %}
         </div>

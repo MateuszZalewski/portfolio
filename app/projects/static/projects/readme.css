@@ -1,0 +1,55 @@
+.readme pre {
+    border-radius: .5em;
+    overflow: auto;
+    background: #f0f0f0;
+    padding: .7em;
+}
+
+.readme h1, .readme h2,
+.readme h3, .readme h4,
+.readme h5, .readme h6 {
+    font-weight: 600;
+    line-height: 1.25;
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+
+.readme h1, h2 {
+    padding-bottom: .2em;
+    border-bottom: 1px solid #d0d7de;
+}
+
+.readme table {
+    border-collapse: collapse;
+}
+
+.readme table tr {
+    text-align: center;
+}
+
+.readme table td,
+.readme table th,
+.readme table tr {
+    border: 1px solid darkgrey;
+    padding: .7em;
+    text-align: left;
+}
+
+.readme table tr:first-child th {
+    border-top: 0;
+}
+.readme table tr:last-child td {
+    border-bottom: 0;
+}
+.readme table tr td:first-child,
+.readme table tr th:first-child {
+    border-left: 0;
+}
+.readme table tr td:last-child,
+.readme table tr th:last-child {
+    border-right: 0;
+}
+
+.readme .even {
+    background: #f3f3f3;
+}
