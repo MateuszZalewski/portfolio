@@ -1,6 +1,9 @@
+.readme {
+    text-align: left;
+}
+
 .readme pre {
     border-radius: .5em;
-    overflow: auto;
     background: #f0f0f0;
     padding: .7em;
 }
@@ -20,19 +23,27 @@
 }
 
 .readme table {
+    display: block;
+    border-spacing: 0;
     border-collapse: collapse;
-}
-
-.readme table tr {
-    text-align: center;
+    max-width: fit-content;
+    overflow-x: auto;
+    white-space: nowrap;
 }
 
 .readme table td,
 .readme table th,
 .readme table tr {
     border: 1px solid darkgrey;
-    padding: .7em;
+    padding: .2em;
+}
+
+.readme table tbody {
     text-align: left;
+}
+
+.readme table thead {
+    text-align: center;
 }
 
 .readme table tr:first-child th {
@@ -52,4 +63,20 @@
 
 .readme .even {
     background: #f3f3f3;
+}
+
+.card .card-body .card-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 3em
+}
+
+.card-img-top {
+    width: 100%;
+    height: 16rem;
+    object-fit: scale-down;
+}
+
+.card {
+    padding-top: 1rem;
 }

@@ -10,46 +10,44 @@
             <p>{{ project.description }}</p>
             <!-- README -->
             {% if project.readme %}
-                <div class="my-5 border rounded border-dark px-4 py-4" style="text-align: left">
-                    <div class="readme">
+                <div class="my-5 border rounded border-dark px-4 py-4">
+                    <article class="readme">
                         {{ project.readme|safe }}
-                    </div>
+                    </article>
                 </div>
             {% endif %}
         </div>
 
         <div class="col-md-4">
-            <div class="position-fixed">
-                <h1>Tech Stack</h1>
-                <!-- Tech Stack -->
-                <div class="row justify-content-md-center mx-5 my-5">
-                    {% for tech in project.techs.all %}
-                        <div class="col-lg-3 col-md-4 col-sm-6" style="align-self: self-end">
-                            <a class="thumbnail" href="{{ tech.website }}">
-                                <img class="img-fluid" src="{{ tech.logo.url }}" alt="">
-                            </a>
-                            <p>{{ tech.name }}</p>
-                        </div>
-                    {% endfor %}
-                </div>
-                <!-- Github link -->
-                {% if project.github %}
-                    <div>
-                        <a class="btn btn-primary my-1 mx-3" href="{{ project.github }}" style="width: 50%">
-                            Github
+            <h1>Tech Stack</h1>
+            <!-- Tech Stack -->
+            <div class="row justify-content-md-center mx-5 my-5">
+                {% for tech in project.techs.all %}
+                    <div class="col-lg-3 col-md-6" style="align-self: self-end">
+                        <a class="thumbnail" href="{{ tech.website }}">
+                            <img class="img-fluid" src="{{ tech.logo.url }}" alt="">
                         </a>
+                        <p>{{ tech.name }}</p>
                     </div>
-                {% endif %}
-
-                <!-- Deployed on -->
-                {% if project.website %}
-                    <div>
-                        <a class="btn btn-primary my-1 mx-3" href="{{ project.website }}" style="width: 50%">
-                            Deployed here
-                        </a>
-                    </div>
-                {% endif %}
+                {% endfor %}
             </div>
+            <!-- Github link -->
+            {% if project.github %}
+                <div>
+                    <a class="btn btn-primary my-2 mx-3" href="{{ project.github }}" style="width: 50%">
+                        Github
+                    </a>
+                </div>
+            {% endif %}
+
+            <!-- Deployed on -->
+            {% if project.website %}
+                <div>
+                    <a class="btn btn-primary my-2 mx-3" href="{{ project.website }}" style="width: 50%">
+                        Deployed here
+                    </a>
+                </div>
+            {% endif %}
         </div>
     </div>
 {% endblock %}
