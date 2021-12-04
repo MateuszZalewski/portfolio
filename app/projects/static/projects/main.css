@@ -65,10 +65,12 @@
     background: #f3f3f3;
 }
 
-.card .card-body .card-text {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-height: 3em
+.card .card-body .card-text,
+.card .card-body .card-title {
+    overflow-y: hidden;
+    text-overflow: clip;
+    max-height: 3em;
+    line-height: 1.5em;
 }
 
 .card-img-top {
