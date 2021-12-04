@@ -1,5 +1,5 @@
 from django.views.generic import ListView, DetailView
-
+from django.shortcuts import render
 from .models import Project
 
 
@@ -14,3 +14,7 @@ class ProjectDetailView(DetailView):
     template_name = 'projects/detail.html'
     extra_context = {'title': 'Project Detail'}
     context_object_name = 'project'
+
+
+def resume(request):
+    return render(request, 'projects/resume.html', context={'title': 'Resume'})
