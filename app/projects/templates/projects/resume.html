@@ -1,8 +1,8 @@
 {% extends 'projects/base.html' %}
 {% block content %}
     <div class="resume">
-            <h1 id="mateusz-zalewski">Mateusz Zalewski</h1>
-        <table>
+        <h1 id="mateusz-zalewski">Mateusz Zalewski</h1>
+        <table class="table">
             <tbody>
                 <tr class="odd">
                     <td>Ludwika Waryńskiego 10</td>
@@ -18,21 +18,20 @@
                 </tr>
             </tbody>
         </table>
-        <blockquote>
+        <blockquote class="blockquote">
             <p>Highly motivated student looking to gain first work experience and turn the theory learned at university into practice. Eager to learn and always curious about innovative technologies. Feels extremely comfortable in a Debian terminal.</p>
         </blockquote>
         <hr/>
         <h2 id="education">Education</h2>
         <dl>
-            <dt>2017 -</dt>
-            <dd><p><strong>Computer Science</strong>: Warsaw University of Technology</p>
+            <dd><p><strong>2017 - Computer Science</strong>: Warsaw University of Technology</p>
                 <p><em>Thesis title: Computer vision based library inventory system</em></p>
             </dd>
         </dl>
         <h2 id="technology-summary">Technology Summary</h2>
-        <dl>
-            <dt>Programming Languages</dt>
-            <dd><p><strong>Python:</strong> Over a year and a half of non-commercial experience. Frameworks/libraries I’m most familiar with:</p>
+        <dl class="row">
+            <dt class="h5"><strong>Programming Languages</strong></dt>
+            <dd class="ms-2"><p><strong>Python:</strong> Over a year and a half of non-commercial experience. Frameworks/libraries I’m most familiar with:</p>
                 <ul>
                     <li>Django</li>
                     <li>Django Rest Framework</li>
@@ -41,38 +40,23 @@
                     <li>pytest</li>
                 </ul>
             </dd>
-            <dd>
+            <dd class="ms-2">
                 <p><strong>HTML5, CSS</strong> used in conjunction with <strong>Bootstrap</strong></p>
             </dd>
-            <dd>
+            <dd class="ms-2">
                 <p>Basic knowledge of <strong>C</strong>, <strong>C++</strong>, <strong>JavaScript</strong>, <strong>Java</strong>, <strong>AMPL</strong>, <strong>bash</strong>, <strong>SAS</strong>, <strong>MIPS32 Assembly</strong></p>
             </dd>
-            <dt>Databases</dt>
-            <dd>
-                <strong>Oracle RDBMS</strong>
+            <dt class="h5"><strong>Databases</strong></dt>
+            <dd class="ms-2">
+                Oracle RDBMS, PostgreSQL, Redis
             </dd>
-            <dd>
-                <strong>PostgreSQL</strong>
+            <dt class="h5"><strong>Operating Systems</strong></dt>
+            <dd class="ms-2">
+                Windows 10, Linux (Debian)
             </dd>
-            <dd>
-                <strong>Redis</strong>
-            </dd>
-            <dt>Operating Systems</dt>
-            <dd>
-                <strong>Windows 10</strong>
-            </dd>
-            <dd>
-                <strong>Linux (Debian)</strong>
-            </dd>
-            <dt>Other tools I’m familiar with</dt>
-            <dd>
-                <strong>PyCharm</strong>
-            </dd>
-            <dd>
-                <strong>Git</strong>
-            </dd>
-            <dd>
-                <strong>Docker</strong>
+            <dt class="h5"><strong>Other tools I’m familiar with</strong></dt>
+            <dd class="ms-2">
+                PyCharm, Git, Docker
             </dd>
         </dl>
         <h2 id="languages">Languages</h2>
@@ -80,8 +64,7 @@
         <p><strong>English</strong> B2</p>
         <h2 id="portfolio">Portfolio</h2>
         <ul>
-            <li>https://github.com/MateuszZalewski</li>
-            <li>https://mateuszzalewski.com</li>
+            <li><a href="https://github.com/MateuszZalewski">Github</a></li>
         </ul>
     </div>
 {% endblock %}

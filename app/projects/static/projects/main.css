@@ -98,7 +98,7 @@
   padding: 10px 10px 10px 10px;
 }
 
-/*!* Title of the resume *!*/
+/* Title of the resume */
 .resume h1 {
   font-size: 55px;
   color: #757575;
@@ -106,13 +106,14 @@
   margin-bottom:15px;
 }
 
-/*!* Titles of categories *!*/
+/* Titles of categories */
 .resume h2 {
   /* This is called "sectioncolor" in the ConTeXt stylesheet. */
   color: #397249;
+    font-weight: bolder;
 }
 
-/*!* There is a bar just before each category *!*/
+/* There is a bar just before each category */
 .resume h2:before {
   content: "";
   display: inline-block;
@@ -125,40 +126,40 @@
 
 /*!* Definitions *!*/
 .resume dt {
-  float: left;
-  clear: left;
-  width: 17%;
-  font-weight: bold;
+    float: left;
+    clear: left;
+    font-weight: bolder;
 }
 
-.resume dd {
-  margin-left: 17%;
-  margin-bottom:7px;
-}
+/*.resume dd {*/
+/*    margin-left: 17%;*/
+/*    object-fit: contain;*/
+/*  !*margin-bottom:7px;*!*/
+/*}*/
 
 .resume p {
   margin-top:0;
   margin-bottom:7px;
 }
 
-/*!* Blockquotes *!*/
+/* Blockquotes */
 .resume blockquote {
   text-align: center
 }
 
-/*!* Links *!*/
+/* Links */
 .resume a {
   text-decoration: none;
   color: #397249;
 }
-.resume a:hover, a:active {
+.resume a:hover, .resume a:active {
   background-color: #397249;
   color: #FFFFFF;
   text-decoration: none;
   text-shadow: 1px 1px 1px #333;
 }
 
-/*!* Horizontal separators *!*/
+/* Horizontal separators */
 .resume hr {
   color: #A6A6A6;
 }
